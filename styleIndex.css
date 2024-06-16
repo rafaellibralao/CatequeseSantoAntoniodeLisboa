@@ -1,0 +1,108 @@
+#container {
+    width: 80%; /* define a largura do container */
+    display: flex; /* coloca o layout flexbox  */
+    gap: 20px; /* define um espaço entre os itens */
+    margin: 20px; /* Adiciona uma margem */
+}
+
+#container img {
+    width: 100%; /* define a largura das imagens */
+    height: auto; /* mantém a proporção original das imagens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adiciona uma sombra */
+}
+
+#container #conteudo {
+    width: 80%; /* define a largura do conteúdo */
+    display: flex; /* aplica o layout flexbox  */
+    flex-direction: column; /* organiza os itens em uma coluna */
+    margin: 20px; /* adiciona uma margem*/
+    text-align: justify; /* justifica o texto */
+    line-height: 1.5; /* define a altura da linha  */
+    font-family: "Times New Roman", Times, serif; 
+}
+
+#titulo1 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#titulo2 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    margin-bottom: 10px; /* adiciona uma margem inferior */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#titulo3 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+
+#titulo4 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.5em; /* define o tamanho da fonte */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#imagem {
+    display: flex; /* coloca o layout flexbox  */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente  */
+    max-width: 150px; /* define a largura máxima */
+}
+
+#imagemParoquia {
+    display: flex; /* coloca o layout flexbox ao elemento de imagem da paróquia */
+    justify-content: center; /* centraliza horizontalmente  */
+    align-items: center; /* centraliza verticalmente  */
+    max-width: 500px; /* define a largura máxima */
+}
+
+#imagemSanto {
+    display: flex; /* coloca o layout flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente  */
+    max-width: 300px; /* define a largura máxima */
+}
+
+#imagemEvento {
+    display: flex; /* aplica o layout flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    max-width: 350px; /* define a largura máxima  */
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column-reverse; /* itens são organizados em coluna */
+        align-items: center; /* itens são centralizados horizontalmente */
+        width: 100%; /*container ocupa toda a largura disponível */
+    }
+
+    p, u, h2{
+        margin: 0px;
+    }
+
+    h2#titulo4{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #imagemSanto{
+        display: none;
+    }
+    
+    #container #conteudo {
+        width: 100%; /*conteúdo ocupa toda a largura disponível */
+        margin: 0; /* remove margens*/
+    }
+    
+    #container img {
+        max-width: 100%; /*imagens têm largura máxima*/
+        margin-bottom: 20px; /*adiciona margem embaixo das imagens */
+    }
+}

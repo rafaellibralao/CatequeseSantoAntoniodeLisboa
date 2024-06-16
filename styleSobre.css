@@ -1,0 +1,79 @@
+#container {
+    width: 70%; /* define a largura do container */
+    display: flex; /* coloca o layout flexbox  */
+    gap: 20px; /* define um espaço entre os itens  */
+    margin: 20px; /* adiciona uma margem ao redor  */
+}
+
+#container #conteudo {
+    width: 100%; /* define a largura do conteúdo */
+    margin: 20px; /* adiciona uma margem ao redor */
+    text-align: justify; /* justifica o texto */
+    line-height: 1.5; /* define a altura da linha */
+    font-family: "Times New Roman", Times, serif; /* define a fonte do texto */
+}
+
+#titulo1 {
+    text-align: center; /* centraliza o título  */
+    font-size: 1.8em; /* aumenta o tamanho da fonte  */
+    margin-bottom: 10px; /* adiciona um espaço abaixo do título */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#siteParoquia {
+    color: rgb(5, 5, 116); /* define a cor do texto do link */
+    text-decoration: none; /* remove o sublinhado */
+    font-size: 15px; /* define o tamanho da fonte  */
+    font-weight: bold; /* deixa o texto em negrito */
+}
+
+#siteParoquia:hover {
+    color: rgb(0, 132, 255); /* cor quando o mouse passa por cima */
+    text-decoration: underline; /* adiciona sublinhado ao passar o mouse */
+}
+
+#titulo2 {
+    text-align: center; /* centraliza o título dentro do contêiner */
+    font-size: 1.8em; /* aumenta o tamanho da fonte */
+    margin-bottom: 10px; /* adiciona um espaço abaixo do título */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#titulo3 {
+    text-align: center; /* centraliza o título dentro do contêiner */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#iframe-container {
+    display: flex; /* coloca o layout flexbox  */
+    justify-content: center; /* centraliza horizontalmente o iframe */
+    margin-top: 20px; /* adiciona uma margem superior */
+}
+
+#iframe-container iframe {
+    width: 100%; /* define a largura do vídeo */
+    height: 350px; /* define a altura do vídeo */
+}
+
+/* responsividade */
+@media (max-width: 768px) { /* tornar a página responsiva */
+    #container {
+        flex-direction: column; /*organiza tudo em coluna */
+        align-items: center; /*alinha tudo no meio, no sentido horizontal */
+        width: 100%; /*container ocupa toda a largura disponível */
+    }
+    
+    #container #conteudo {
+        width: 100%; /*conteúdo ocupa toda a largura disponível */
+        margin: 0;
+    }
+    
+    #titulo1, #titulo2, #titulo3 {
+        font-size: 1.5em; /*títulos ficam um pouco maiores*/
+    }
+    
+    #iframe-container iframe {
+        height: 200px; /* iframes têm uma altura fixa */
+    }
+}

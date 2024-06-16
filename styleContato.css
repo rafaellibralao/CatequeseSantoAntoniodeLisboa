@@ -1,0 +1,103 @@
+#container {
+    width: 80%; /* define a largura do container */
+    display: flex; /* coloca o layout flexbox  */
+    gap: 10px; /* define um espaço entre os itens  */
+    margin: 20px; /* adiciona uma margem ao redor  */
+}
+
+#imagem {
+    display: flex; /* coloca o layout flexbox */
+    justify-content: center; /* centraliza horizontalmente */
+    align-items: center; /* centraliza verticalmente */
+    max-width: 150px; /* define a largura máxima */
+}
+
+#container img {
+    width: 100%; /* define a largura */
+    height: auto; /* mantém a proporção original */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* adiciona uma sombra  */
+}
+
+#container #conteudo {
+    width: 80%; /* define a largura  */
+    display: flex; /* coloca o layout flexbox */
+    flex-direction: column; /* organiza os itens em uma coluna */
+    margin: 20px; /* adiciona uma margem*/
+    text-align: justify; /* justifica o texto */
+    font-family: "Times New Roman", Times, serif; 
+}
+
+#container #conteudo p {
+    margin: 10px 0px; /* define uma margem vertical para os parágrafo */
+}
+
+#titulo1 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    font-family: "Courier New", Courier, monospace; 
+}
+
+#imagens {
+    display: flex; /* coloca o layout flexbox */
+    align-items: center; /* centraliza verticalmente  */
+    justify-content: center; /* centraliza horizontalmente  */
+    gap: 0px 20px; /* define um espaço horizontal entre as imagens */
+}
+
+#imagemLogo {
+    width: 150px; /* define a largura do logo */
+    height: auto; /* mantém a proporção original do logo */
+}
+
+#container #conteudo2 {
+    width: 100%; /* define a largura do conteúdo */
+    display: flex; /* coloca o layout flexbox ao conteúdo */
+    flex-direction: column; /* organiza os itens do conteúdo em uma coluna */
+    margin: 20px; /* adiciona uma margem */
+    text-align: justify; /* justifica o texto */
+    line-height: 1.5; /* define a altura da linha para melhor legibilidade*/
+    font-family: "Times New Roman", Times, serif; 
+}
+
+#titulo2 {
+    text-align: center; /* centraliza o texto */
+    font-size: 1.8em; /* define o tamanho da fonte */
+    margin-bottom: 10px; /* adiciona uma margem inferior */
+    font-family: "Courier New", Courier, monospace; 
+}
+/*responsividade */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; /* itens são organizados em coluna */
+        align-items: center; /* stens são centralizados horizontalmente */
+    }
+
+    div#container{
+        margin: 10px;
+    }
+
+    #imagem {
+        width: 150px; /*largura da imagem não ultrapassa a largura do seu contêiner */
+        height: 100px; /*adiciona margem embaixo da imagem para espaçamento */
+    }
+    
+    #conteudo, #conteudo2 {
+        width: 100%; /*conteúdo ocupa toda a largura disponível */
+        text-align: center; /*o texto dentro dos conteúdos é centralizado */
+    }
+    
+    div#conteudo2 div#imagens{
+        flex-direction: center;
+    }
+    
+    #imagens {
+        display: flex; /*imagens são exibidas em flexbox */
+        flex-direction: center; /* organiza as imagens em coluna */
+        align-items: center; /* centraliza as imagens horizontalmente */
+    }
+    
+    #imagemLogo {
+        margin: 10px 0; /*adiciona margem em cima e embaixo do logotipo */
+    }
+    
+}

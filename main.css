@@ -1,0 +1,127 @@
+body {
+    margin: 0; /* tira a margem */
+    padding: 0; /* tira o preenchimento */
+    background-color: #f5e7e7; /* define a cor de fundo */
+}
+
+main {
+    display: flex; /* coloca o layout flexbox */
+    flex-direction: column; /* organiza os itens em uma coluna */
+    align-items: center; /* centraliza horizontalmente os itens */
+    padding: 20px; /* adiciona preechimento ao redor */
+}
+
+section {
+    margin-bottom: 20px; /* adiciona uma margem inferior a cada seção */
+}
+
+header { /*cabeçalho*/
+    height: 80px; /* define a altura*/
+    display: flex; /* coloca o layout flexbox  */
+    justify-content: center; /* centraliza horizontalmente os itens  */
+    align-items: center; /* centraliza verticalmente os itens */
+    gap: 0px 10px; /* define um espaço horizontal entre os itens  */
+    background-color: rgb(128, 0, 0); /* define a cor de fundo  */
+    color: rgb(203, 203, 203); /* define a cor do texto  */
+    padding: 5px; /* adiciona preechimento */
+}
+
+header img {
+    height: 80%; /* define a altura da imagem */
+}
+
+#titulo {
+    text-align: center; /* centraliza o título */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; 
+}
+
+nav {
+    display: flex; /* coloca o layout flexbox  */
+    justify-content: center; /* centraliza horizontalmente os itens */
+    align-items: center; /* centraliza verticalmente os itens */
+    gap: 0px 10px; /* define um espaço horizontal  */
+    padding: 4px 0px; /* coloca um preenchimetno vertical  */
+    background-color: rgba(128, 0, 0, 80%); /* define a cor de fundo  */
+}
+
+nav a {
+    min-width: 80px; /* define a largura mínima dos links de navegação */
+    padding: 2px 5px; /* coloca um preenchimento vertical e horizontal  */
+    border-radius: 2px; /* define bordas arredondadas */
+    color: white; /* define a cor do texto dos links */
+    text-align: center; /* centraliza o texto dos links */
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; 
+    text-decoration: none; /* remove o sublinhado dos links */
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 20%); /* define a cor de fundo dos links ao passar o mouse com transparência */
+}
+
+footer {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif; /* define a fonte */
+    display: flex; /* coloca o layout flexbox  */
+    justify-content: center; /* centraliza horizontalmente os itens */
+    background-color: rgb(86, 2, 2); /* define a cor de fundo */
+    color: #fff; /* define a cor do texto */
+    text-align: center; /* centraliza o texto  */
+    padding: 5px 20px; /* adiciona um preechimento */
+}
+
+footer div {
+    width: 100%; /* define a largura da div  */
+}
+
+footer div a {
+    color: white; /* define a cor dos links  */
+    text-decoration: none; /* remove o sublinhado dos links  */
+}
+
+#logofatec {
+    width: 150px; /* define a largura da imagem */
+    height: auto; /* mantém a proporção original da imagem */
+    margin-top: 15px; /* adiciona uma margem superior */
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* itens são organizados em coluna */
+        gap: 5px; /*espaçamento entre os itens */
+        height: auto; /*altura se ajusta ao conteúdo */
+    }
+    header img{
+       display: none;;
+    }
+    
+    nav {
+        flex-direction: center; /* itens são organizados horizontalmente no centro */
+        gap: 5px; /* espaçamento entre os itens*/
+    }
+    
+    main {
+        padding: 10px; /*adiciona espaçamento interno */
+    }
+    
+    footer {
+        flex-direction: center; /* itens dentro do footer são organizados em coluna */
+        gap: 10px; /* espaçamento entre os itens */
+    }
+
+    footer h3{
+        font-size: 15px;
+    }
+
+    footer a{
+        font-size: 12px;
+    }
+    
+    footer div {
+        margin-bottom: 10px; /* adiciona margem embaixo de cada div*/
+    }
+    
+    footer img#logofatec{
+        width: 80px;
+        height: 30px;
+    }
+}
